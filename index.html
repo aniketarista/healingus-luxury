@@ -191,11 +191,14 @@
   .ins{text-align:center}
   .ins h2{max-width:900px;margin:14px auto 14px}
   .ins p{color:var(--muted);font-size:1.1rem;max-width:640px;margin:0 auto 28px}
-  .ins .logos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:30px}
-  .ins .logos span{
-    font-family:var(--label);font-weight:600;letter-spacing:.05em;color:var(--navy-3);
-    background:#fff;border:1px solid var(--line);padding:.6rem 1.3rem;border-radius:50px;font-size:.9rem;
+  .ins .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;max-width:880px;margin:0 auto 30px}
+  .ins .logos .logo-card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    display:flex;align-items:center;justify-content:center;padding:16px;min-height:78px;
+    transition:transform .25s ease, box-shadow .25s ease;
   }
+  .ins .logos .logo-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -16px rgba(18,50,42,.35)}
+  .ins .logos .logo-card img{max-height:44px;width:auto;max-width:100%;object-fit:contain}
 
   /* ---------- Program Cards ---------- */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -513,8 +516,18 @@
     <span class="eyebrow center">In-Network Coverage</span>
     <h2>Your Insurance May Cover 100% of the Cost of Our High-Quality Treatment Programs</h2>
     <p>We are in-network with multiple insurance providers for treatment you deserve!</p>
+    <!-- LOGO PLACEHOLDERS: replace each img src with your real logo image path/URL. Keep alt text. -->
     <div class="logos">
-      <span>Aetna</span><span>Cigna</span><span>Blue Cross Blue Shield</span><span>UnitedHealthcare</span><span>Humana</span><span>Optum</span>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/acaaf0d6-8a780844-e25a-4bb5-8eb5-276d45b8c0a5_105j01m000000000000028%20(1).png" alt="Aetna" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/1104iul-gray-anthem_104600o000000000000028.png" alt="Cigna" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/ec4682bd-nyship-logo_105c024000000000000028.png" alt="Blue Cross Blue Shield" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/1bcje94-gray-cigna_104601h000000000000028.png" alt="UnitedHealthcare" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/p7k3pq-gray-aetna_103w00q000000000000028.png" alt="Humana" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/3fd29d82-ins-logo-bluecross%20(1).svg" alt="Optum" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/ujcbo2-gray-umr_103401o000000000000028.png" alt="Anthem" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/19tdaxf-gray-highmark_104v016000000000000028.png" alt="Kaiser Permanente" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/1lxge6b-gray-united-healthcare_104601b000000000000028.png" alt="Magellan Health" loading="lazy"></div>
+      <div class="logo-card"><img src="https://hucenters.vercel.app/singd7-gray-horizon_103n01n000000000000028.png" alt="TRICARE" loading="lazy"></div>
     </div>
     <a href="#verify" class="btn btn-gold btn-lg">Verify Insurance Now</a>
   </div>
